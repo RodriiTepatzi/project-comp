@@ -1,0 +1,34 @@
+:root{
+    --primaryColor: #00141B;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: fit-content;
+    background-color: var(--primaryColor);
+}
+
+.menu-item{
+    font-size: 1.5rem;
+    color: white;;
+}
+
+.menu-item:hover{
+    cursor: pointer;
+}
+
+.spacer{
+    width: 100%;
+}
+
+.logo > img{
+    width: 300px;
+}
