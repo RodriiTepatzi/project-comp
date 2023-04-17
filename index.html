@@ -1,38 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<meta charset="utf-8">
+	<title> Flexbox Product Page </title>
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
-    <script src="./js/main.js"></script>
-    <link rel="stylesheet" href="./css/main.css">
+	<script src="./js/Models/Producto.js"></script>
+	<script src="./js/Models/CartProducto.js"></script>
     <title>Partes</title>
-    
 </head>
+
 <body>
-    <navbar>
-        <div class="menu">
+
+	<nav class="product-filter">
+		<div class="menu">
             <div class="logo">
                 <img src="./assets/img/logo.png">
+            </div>
+            <div class="spacer">
             </div>
             <div class="menu-item">
                 Inicio
             </div>
-            <div class="spacer">
-
+            <div class="menu-item">
+                Productos
             </div>
             <div class="menu-item">
+                Contacto
+            </div>
+            <div class="menu-item" id="carrito">
                 <i class="fa-solid fa-cart-shopping"></i>
             </div>
             <div class="menu-item">
                 <i class=""></i>
             </div>
         </div>
-    </navbar>
-    <div>
+	</nav>
+	
+	<section class="products">
+		<div class="product-card">
+			<div class="product-image">
+				<img src="assets/img/rtx-3050.jpg">
+			</div>
+			<div class="product-info">
+				<h5>Nvidia GeForce RTX 3050</h5>
+				<h6>$6,229.00</h6>
+				<button class="add-btn" onclick="agregarAlCarrito(1)">Agregar al carrito</button>
+			</div>
+		</div>
+		
+		<div class="product-card">
+			<div class="product-image">
+				<img src="assets/img/rtx-4080.jpeg">
+			</div>
+			<div class="product-info">
+				<h5>MSI GeForce RTX 4080 16GB GDDR6X</h5>
+				<h6>$25,789.00</h6>
+				<button class="add-btn" onclick="agregarAlCarrito(2)">Agregar al carrito</button>
+			</div>
+		</div>
+		
+		<div class="product-card">
+			<div class="product-image">
+				<img src="assets/img/ogmc01.jpg">
+			</div>
+			<div class="product-info">
+				<h5>Gabinete Ocelot Gaming OGMC01</h5>
+				<h6>$1,099.00</h6>
+				<button class="add-btn" onclick="agregarAlCarrito(3)">Agregar al carrito</button>
+			</div>
+		</div>
+		
+		<div class="product-card">
+			<div class="product-image">
+				<img src="assets/img/ryzen9-7950x.jpg">
+			</div>
+			<div class="product-info">
+				<h5>AMD Ryzen™ 9 7950X Procesador</h5>
+				<h6>$11609.00</h6>
+				<button class="add-btn" onclick="agregarAlCarrito(4)">Agregar al carrito</button>
+			</div>
+		</div>
+		
+		<div class="product-card">
+			<div class="product-image">
+				<img src="assets/img/msiprox670-p.jpg">
+			</div>
+			<div class="product-info">
+				<h5>MSI Pro X670-P WiFi DDR5 Motherboard</h5>
+				<h6>$6808.78</h6>
+				<button class="add-btn" onclick="agregarAlCarrito(5)">Agregar al carrito</button>
+			</div>
+		</div>
+		
+		<div class="product-card">
+			<div class="product-image">
+				<img src="assets/img/kingstonfury.jpg">
+			</div>
+			<div class="product-info">
+				<h5>Kingston Fury Beast Black DDR5 32 GB</h5>
+				<h6>$2,294.88</h6>
+				<button class="add-btn" onclick="agregarAlCarrito(6)">Agregar al carrito</button>
+			</div>
+		</div>
+		
+		<div class="product-card">
+			<div class="product-image">
+				<img src="assets/img/rogzephyrus.jpg">
+			</div>
+			<div class="product-info">
+				<h5>Asus ROG Zephyrus 15.6" QHD Gaming Laptop</h5>
+				<h6>$39,999.00</h6>
+				<button class="add-btn" onclick="agregarAlCarrito(7)">Agregar al carrito</button>
+			</div>
+		</div>
+		
+		<div class="product-card">
+			<div class="product-image">
+				<img src="assets/img/nzxtkrakenz53.jpg">
+			</div>
+			<div class="product-info">
+				<h5>NZXT KRAKEN Z53 ENFRIAMIENTO LIQUIDO 240MM</h5>
+				<h6>$5,118.20</h6>
+				<button class="add-btn" onclick="agregarAlCarrito(8)">Agregar al carrito</button>
+			</div>
+		</div>
+		
+		<div class="product-card">
+			<div class="product-image">
+				<img src="assets/img/corsair850x.jpg">
+			</div>
+			<div class="product-info">
+				<h5>Corsair Serie RMX (2021), RM850x, 850 W</h5>
+				<h6>$3,298.95</h6>
+				<button class="add-btn" onclick="agregarAlCarrito(9)">Agregar al carrito</button>
+			</div>
+		</div>
+		
+		<div class="product-card">
+			<div class="product-image">
+				<img src="assets/img/razerblackwidow.jpg">
+			</div>
+			<div class="product-info">
+				<h5>Razer BlackWidow V3 Mini HyperSpeed</h5>
+				<h6>$3,345.85</h6>
+				<button class="add-btn" onclick="agregarAlCarrito(10)">Agregar al carrito</button>
+			</div>
+		</div>
+		
+	</section>
 
-    </div>
+	
+	
+	<div id="myModal" class="modal">
+	<div class="modal-content">
+	  <span class="close">&times;</span>
+	  <p>Carrito</p>
+
+	  <p>
+
+	  	<div id="cart-data">
+			<div class="gray-text">
+				No hay ningun articulo.
+			</div>
+		</div>
+	</div>
+  
+  </div>
+  <script src="./js/main.js"></script>
+
 </body>
 </html>
